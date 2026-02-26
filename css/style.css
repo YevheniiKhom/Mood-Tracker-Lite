@@ -65,15 +65,15 @@ body {
 }
 
 .info-slider-happy {
-  background-image: url(/components/happy.png);
+  background-image: url(../components/happy.png);
 }
 
 .info-slider-suprised {
-  background-image: url(/components/surprised.png);
+  background-image: url(../components/surprised.png);
 }
 
 .info-slider-sad {
-  background-image: url(/components/sad.png);
+  background-image: url(../components/sad.png);
 }
 
 .info-slider-happy,

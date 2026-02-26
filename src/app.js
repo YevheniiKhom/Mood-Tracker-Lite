@@ -22,8 +22,8 @@ sadBtn.addEventListener("click", () => {
   inputField.focus();
 });
 
-saveMomentBtn.addEventListener("click", () => {
-  event.preventDefault();
+saveMomentBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   let create = document.createElement("li");
   create.textContent = inputField.value;
   notesText.appendChild(create);
