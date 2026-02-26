@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e6e6e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Goldman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* НЕВИДИМКА */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.hero-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+}
+.main {
+  background-color: #fff;
+  width: 480px;
+  height: 580px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Інфо секція */
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-title {
+  margin: 30px auto 10px;
+}
+
+/* SLIDER */
+.info-slider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.info-slider-happy {
+  background-image: url(/components/happy.png);
+}
+
+.info-slider-suprised {
+  background-image: url(/components/surprised.png);
+}
+
+.info-slider-sad {
+  background-image: url(/components/sad.png);
+}
+
+.info-slider-happy,
+.info-slider-suprised,
+.info-slider-sad {
+  width: 140px;
+  height: 140px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mood-btn:hover {
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* КОМЕНТ */
+.info-coment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px auto;
+}
+
+.info-input {
+  width: 400px;
+  height: 60px;
+  border: 1px solid #e6e6e7;
+  border-radius: 12px;
+  margin: 10px auto;
+  padding: 8px 16px;
+  background-color: rgb(251, 249, 249);
+  font-size: 20px;
+}
+
+.info-input:focus {
+  outline: none;
+  border-color: rgb(251, 249, 249);
+  box-shadow: 0 0 20px rgb(220, 219, 219);
+}
+
+.info-btn {
+  width: 160px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 22px;
+  background-color: rgba(255, 204, 0, 0.6);
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.info-btn:hover {
+  transition: 0.3s;
+  background-color: transparent;
+  border: 3px solid rgba(255, 204, 0, 0.6);
+}
+
+/* notes-section */
+.notes-title {
+  margin: 0 auto;
+}
+
+.notes-text-filed {
+  margin: 0 auto;
+  background-color: rgb(251, 249, 249);
+  width: 460px;
+  min-height: 180px;
+  max-height: 180px;
+  border-radius: 18px;
+  border: 1px solid #e6e6e7;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.notes-text-filed ul {
+  margin: 10px 10px;
+  padding-left: 20px;
+}
+
+.notes-text-filed li {
+  letter-spacing: 1px;
+  max-width: 400px; /* Текст перейде на новий рядок раніше */
+  word-wrap: break-word; /* Перенос довгих посилань або слів */
+  margin-bottom: 8px;
+}
+
+/* скрол */
+
+.notes-text-filed::-webkit-scrollbar {
+  width: 8px;
+}
+
+.notes-text-filed::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.notes-text-filed::-webkit-scrollbar-thumb {
+  background: rgba(255, 204, 0, 0.6);
+  border-radius: 10px;
+}
+
+/* Для Firefox */
+.notes-text-filed {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 204, 0, 0.6) #f1f1f1;
+}

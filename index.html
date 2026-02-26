@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Mood</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="hero-title">Mood Tracker Lite</h1>
+    </header>
+    <main class="main">
+      <form class="section-container">
+        <section class="info-section">
+          <h2 class="info-title">Як твій настрій?</h2>
+          <div class="info-slider">
+            <button
+              class="info-slider-happy mood-btn"
+              id="happy-btn"
+              type="button"
+            ></button>
+            <button
+              class="info-slider-suprised mood-btn"
+              id="suprised-btn"
+              type="button"
+            ></button>
+            <button
+              class="info-slider-sad mood-btn"
+              id="sad-btn"
+              type="button"
+            ></button>
+          </div>
+          <div class="info-coment">
+            <label for="emotion" class="visually-hidden"
+              >Розкажи причину емоції:</label
+            >
+            <input
+              class="info-input"
+              id="emotion"
+              type="text"
+              placeholder="Чому такий настрій?"
+            />
+            <button class="info-btn" id="save-moment">Зберегти момент?</button>
+          </div>
+        </section>
+        <section class="notes-section">
+          <h3 class="notes-title">Ваші записи:</h3>
+          <div class="notes-text-filed">
+            <ul id="notes-text"></ul>
+          </div>
+        </section>
+      </form>
+    </main>
+    <script src="/src/app.js"></script>
+  </body>
+</html>
