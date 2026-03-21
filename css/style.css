@@ -138,6 +138,39 @@ body {
   border: 3px solid rgba(255, 204, 0, 0.6);
 }
 
+.note-content {
+  flex-grow: 1;
+  min-width: 0;
+  text-align: left;
+
+  padding-right: 10px;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  flex-grow: 1;
+}
+
+/* delete button */
+
+.delete-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #696969;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 2px 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000; /* Темнішає при наведенні */
+}
+
 /* notes-section */
 .notes-title {
   margin: 0 auto;
@@ -157,15 +190,32 @@ body {
 }
 
 .notes-text-filed ul {
-  margin: 10px 10px;
+  margin: 10px 2px;
   padding-left: 20px;
+  list-style: none;
 }
 
 .notes-text-filed li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
   letter-spacing: 1px;
-  max-width: 400px; /* Текст перейде на новий рядок раніше */
-  word-wrap: break-word; /* Перенос довгих посилань або слів */
-  margin-bottom: 8px;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+.notes-text-filed li::before {
+  content: "\2665";
+  color: #ff4d4d;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-right: 5px;
+  flex-shrink: 0;
 }
 
 /* скрол */
